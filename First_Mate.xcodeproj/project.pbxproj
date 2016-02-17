@@ -15,6 +15,8 @@
 		4A599A561C7528090028EBB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A599A541C7528090028EBB3 /* LaunchScreen.storyboard */; };
 		4A599A611C7528090028EBB3 /* First_MateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A599A601C7528090028EBB3 /* First_MateTests.swift */; };
 		4A599A6C1C7528090028EBB3 /* First_MateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A599A6B1C7528090028EBB3 /* First_MateUITests.swift */; };
+		4A599A7A1C752AFE0028EBB3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A599A791C752AFE0028EBB3 /* ThirdViewController.swift */; };
+		4A599A7C1C752B210028EBB3 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A599A7B1C752B210028EBB3 /* FourthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		4A599A671C7528090028EBB3 /* First_MateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = First_MateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A599A6B1C7528090028EBB3 /* First_MateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First_MateUITests.swift; sourceTree = "<group>"; };
 		4A599A6D1C7528090028EBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A599A791C752AFE0028EBB3 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		4A599A7B1C752B210028EBB3 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				4A599A4B1C7528090028EBB3 /* FirstViewController.swift */,
 				4A599A4D1C7528090028EBB3 /* SecondViewController.swift */,
 				4A599A4F1C7528090028EBB3 /* Main.storyboard */,
+				4A599A791C752AFE0028EBB3 /* ThirdViewController.swift */,
+				4A599A7B1C752B210028EBB3 /* FourthViewController.swift */,
 				4A599A521C7528090028EBB3 /* Assets.xcassets */,
 				4A599A541C7528090028EBB3 /* LaunchScreen.storyboard */,
 				4A599A571C7528090028EBB3 /* Info.plist */,
@@ -264,7 +270,9 @@
 			files = (
 				4A599A4E1C7528090028EBB3 /* SecondViewController.swift in Sources */,
 				4A599A4A1C7528090028EBB3 /* AppDelegate.swift in Sources */,
+				4A599A7A1C752AFE0028EBB3 /* ThirdViewController.swift in Sources */,
 				4A599A4C1C7528090028EBB3 /* FirstViewController.swift in Sources */,
+				4A599A7C1C752B210028EBB3 /* FourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
