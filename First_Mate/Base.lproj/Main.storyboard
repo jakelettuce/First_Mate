@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home-->
@@ -76,29 +77,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="195" y="279" width="210" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="192" y="329" width="216" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="bRT-bK-0a7">
+                                <rect key="frame" x="0.0" y="20" width="600" height="523"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="0hc-nC-hGZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="523"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0hc-nC-hGZ" firstAttribute="leading" secondItem="bRT-bK-0a7" secondAttribute="leading" id="DdG-Wa-uFH"/>
+                                    <constraint firstAttribute="trailing" secondItem="0hc-nC-hGZ" secondAttribute="trailing" id="NCl-4v-8g0"/>
+                                    <constraint firstAttribute="bottom" secondItem="0hc-nC-hGZ" secondAttribute="bottom" id="dqY-Ln-Qj4"/>
+                                    <constraint firstItem="0hc-nC-hGZ" firstAttribute="top" secondItem="bRT-bK-0a7" secondAttribute="top" id="ztB-an-shF"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="zvj-n0-gXU"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="bRT-bK-0a7" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="1gc-0X-DWj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bRT-bK-0a7" secondAttribute="trailing" constant="-20" id="27q-x4-6oZ"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="bRT-bK-0a7" secondAttribute="bottom" constant="8" id="94H-m6-BJ7"/>
+                            <constraint firstItem="bRT-bK-0a7" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="qSV-57-D7H"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" image="MapIcon" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="mapTemplate" destination="0hc-nC-hGZ" id="ztF-vO-UyW"/>
+                        <outlet property="scroller" destination="bRT-bK-0a7" id="XzB-Rg-dfN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,6 +178,7 @@
         <image name="MapIcon" width="40" height="40"/>
         <image name="ScheduleIcon" width="43" height="35"/>
         <image name="first" width="30" height="30"/>
+        <image name="map" width="525" height="387"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

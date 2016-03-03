@@ -10,12 +10,16 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var mapTemplate: UIImageView!
+    @IBOutlet weak var scroller: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
     }
-    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return mapTemplate
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
